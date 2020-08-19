@@ -3,6 +3,8 @@ import streamlit as st
 from textblob import TextBlob
 import pandas as pd
 import numpy as np
+import nltk
+nltk.download()
 
 # Emoji
 import emoji
