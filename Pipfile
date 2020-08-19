@@ -54,6 +54,7 @@ MarkupSafe = "==1.1.1"
 emoji = "*"
 textblob = "*"
 bs4 = "*"
+nltk = "*"
 
 [requires]
 python_version = "3.8"
