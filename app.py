@@ -1,5 +1,6 @@
 import streamlit as st
 # NLP Pkgs
+import nltk
 from textblob import TextBlob
 import pandas as pd
 import numpy as np
@@ -70,8 +71,8 @@ def main():
 				st.success("Length of Full Text::{}".format(len_of_full_text))
 				st.success("Length of Short Text::{}".format(len_of_short_text))
 				st.info(result[:len_of_short_text])
-				c_sentences = [ sent for sent in blob.sentences ]
-				c_sentiment = [sent.sentiment.polarity for sent in blob.sentences]
+				c_sentences = [ sentences for sentence in blob.sentences]
+				c_sentiment = [sentences.sentiment.polarity for sentences in blob.sentences]
 
 				# Dataframe
 				new_df = pd.DataFrame(zip(c_sentences,c_sentiment),columns=['Sentence','Sentiment'])
